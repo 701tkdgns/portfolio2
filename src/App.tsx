@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { animated, useSpring } from '@react-spring/web';
+import { Main, Navi } from './pages';
+import './app.scss';
 
-function App() {
+
+const App = () => {
+  const props = useSpring({
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+    });
+
+  const navprop = useSpring({
+      from: { x: -50 },
+      to: { x: 0 },
+    });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <animated.div style={props}>
+        <Main />
+      </animated.div>
+      <animated.div style={navprop}>
+        <Navi />
+      </animated.div>
     </div>
-  );
-}
+  )
+};
 
 export default App;
