@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 import { Main, Navi } from './pages';
 import './app.scss';
 
 
 const App = () => {
+  const [pop, setPop] = useState(0);
+
   const props = useSpring({
-      from: { opacity: 0 },
-      to: { opacity: 1 },
-    });
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  });
 
   const navprop = useSpring({
-      from: { x: -50 },
-      to: { x: 0 },
-    });
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  });
 
   return (
     <div>
