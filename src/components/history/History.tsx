@@ -32,7 +32,7 @@ const History = () => {
 
         <Card 
           onTitle={'조선메타실록'}
-          onLink={'https://www.roblox.com/games/10825715607/unnamed'}
+          onLink={'https://store.steampowered.com/app/2216600/Korea_Dynasty/'}
           onDays={'2023/03 ~ 2023/06'}
           onContents={'조선메타실록 QA 및 NPC 대사 작업'} />
 

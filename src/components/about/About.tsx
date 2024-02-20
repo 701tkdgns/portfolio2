@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from "../../assets/profile.jpg";
+import profile from '../../assets/profile.jpg';
 import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiMongodb, SiRedis, SiJenkins, SiKubernetes, SiDocker, SiMysql, SiNodedotjs, SiReact } from "react-icons/si";
 
 const About = () => {
