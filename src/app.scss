@@ -122,7 +122,6 @@ h6 {
     }
 }
 
-
 .psh__portfolio-navi-btn {
     align-items: center;
     justify-content: center;
@@ -165,6 +164,7 @@ h6 {
         width: 100%;
         justify-content: space-between;
         font-size: 2rem;
+
         * {
             padding: .1rem 0 0 .1rem;
             cursor: pointer;
@@ -188,6 +188,7 @@ h6 {
 .about {
     width: 100%;
     height: 100%;
+
     .about-header {
         text-align: center;
     }
@@ -224,17 +225,19 @@ h6 {
                 }
             }
 
-            .about-body-career{
+            .about-body-career {
                 margin: 1rem 0;
+
                 .about-body-career-text {
                     margin: .5rem 0;
+
                     h5 {
                         text-align-last: left;
                     }
                 }
             }
 
-            .about-body-career:last-child{
+            .about-body-career:last-child {
                 padding-bottom: .5rem;
             }
         }
@@ -244,8 +247,56 @@ h6 {
 .history {
     width: 100%;
     height: 100%;
+
     .history-header {
         text-align: center;
+    }
+}
+
+.psh__portfolio-card {
+    .psh__portfolio-card-header {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .psh__portfolio-card-body {
+        display: flex;
+        justify-content: center;
+        .psh__portfolio-card-photo {
+            width: 17rem;
+            height: 9.5rem;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
+
+            .psh__portfolio-card-photo-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                transition: all 1s ease;
+                color: #FFF;
+                &.active {
+                    background: rgba($color: #000000, $alpha: 0.5);
+                    display: inline-flex;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .psh__portfolio-card-text{
+        margin: 1rem 0;
+        .psh__portfolio-card-text-contents {
+            padding: 1rem 0;
+        }
     }
 }
 
