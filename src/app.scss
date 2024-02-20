@@ -261,6 +261,16 @@ h6 {
     .psh__portfolio-card-body {
         display: flex;
         justify-content: center;
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+            transition: all 1s ease;
+            &:hover{
+                color: #1789e7;
+            }
+        }
+
         .psh__portfolio-card-photo {
             width: 17rem;
             height: 9.5rem;
@@ -294,9 +304,6 @@ h6 {
     }
     .psh__portfolio-card-text{
         margin: 1rem 0;
-        .psh__portfolio-card-text-contents {
-            padding: 1rem 0;
-        }
     }
 }
 
