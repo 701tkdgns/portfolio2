@@ -6,7 +6,7 @@ import './app.scss';
 
 
 const App = () => {
-  const [pop, setPop] = useState(0);
+  const [pop, setPop] = useState(false);
   const [since, setSince] = useState(0)
 
   const props = useSpring({
@@ -20,11 +20,10 @@ const App = () => {
   });
 
   const PopupClick = () => {
-    setPop(1);
+    setPop((prev) => !prev);
   }
 
   const SinceClick = (props : number) => {
-    console.log(props);
     setSince(props);
   }
 
@@ -36,8 +35,8 @@ const App = () => {
       <animated.div style={navprop}>
         <Navi onPop={PopupClick} onSince={SinceClick}/>
       </animated.div>
-      {/* <Popup/> */}
-      {pop !== 0 && <Shadow/>}
+      {pop && <Popup onPop={PopupClick} popSince={since}/>} 
+      {pop && <Shadow/>}
     </div>
   )
 };
