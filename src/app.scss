@@ -1,0 +1,406 @@
+:root {
+    --ivory: #fffff0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--ivory);
+    width: 100%;
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.psh__portfolio-oval {
+    width: 80rem;
+    height: 80rem;
+    background: #000011;
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .psh__portfolio-oval-light {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        border-top: 40rem solid transparent;
+        border-bottom: 40rem solid transparent;
+        border-left: 40rem solid rgba($color: #eee, $alpha: 0.5);
+        border-right: 40rem solid rgba($color: #eee, $alpha: 0.5);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: all ease;
+        animation: rotateDOM 9s linear infinite;
+    }
+}
+
+.psh__portfolio-oval-border1,
+.psh__portfolio-oval-border2,
+.psh__portfolio-oval-border3 {
+    border: 2px solid var(--ivory);
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.psh__portfolio-oval-border1 {
+    width: 70rem;
+    height: 70rem;
+}
+
+.psh__portfolio-oval-border2 {
+    width: 66rem;
+    height: 66rem;
+}
+
+.psh__portfolio-oval-border3 {
+    width: 62rem;
+    height: 62rem;
+}
+
+.psh__portfolio-oval-border {
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    background: rgb(20, 20, 20);
+    border-radius: 50%;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.psh__portfolio-oval-main {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background: var(--ivory);
+    border-radius: 50%;
+    left: 13%;
+    top: 13%;
+    animation: rotateDOM 6s linear infinite;
+    text-align: center;
+    align-items: center;
+}
+
+.psh__portfolio-oval-main h1 {
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+.psh__portfolio-navi {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    width: 17rem;
+    height: 3.2rem;
+    top: 80%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+
+    .psh__portfolio-navi-container {
+        list-style: none;
+        display: flex;
+        flex: 1 1 1 1;
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+
+    }
+}
+
+.psh__portfolio-navi-btn {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    // border: 1px solid #0E6CEE;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 2rem;
+    transition: all .5s ease;
+    cursor: pointer;
+    background-color: var(--ivory);
+
+    a {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &:hover {
+        background-color: black;
+        color: var(--ivory);
+    }
+}
+
+.psh__portfolio-popup {
+    background: var(--ivory);
+    width: 25rem;
+    height: 25rem;
+    overflow-y: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    .psh__portfolio-popup-header {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 2rem;
+
+        * {
+            padding: .1rem 0 0 .1rem;
+            cursor: pointer;
+        }
+    }
+
+    .psh__portfolio-popup-body {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.psh__portfolio-shadow {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba($color: #000000, $alpha: 0.8);
+    position: absolute;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+
+    .about-header {
+        text-align: center;
+    }
+
+    .about-body {
+        justify-content: center;
+        text-align: center;
+        display: grid;
+        margin-top: 1rem;
+
+        .about-body-profile {
+            width: 10rem;
+            height: 10rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
+
+            .about-body-text {
+                h3 {
+                    text-align: center;
+                    margin: 1rem 0;
+                }
+
+                text-align: left;
+
+                .about-body-text-part {
+                    display: grid;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    gap: .5rem;
+                }
+            }
+
+            .about-body-career {
+                margin: 1rem 0;
+
+                .about-body-career-text {
+                    margin: .5rem 0;
+
+                    h5 {
+                        text-align-last: left;
+                    }
+                }
+            }
+
+            .about-body-career:last-child {
+                padding-bottom: .5rem;
+            }
+        }
+    }
+}
+
+.history {
+    width: 100%;
+    height: 100%;
+
+    .history-header {
+        text-align: center;
+    }
+}
+
+.psh__portfolio-card {
+    .psh__portfolio-card-header {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .psh__portfolio-card-body {
+        display: flex;
+        justify-content: center;
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+            transition: all 1s ease;
+            font-size: 1.2rem;
+            &:hover{
+                color: #1789e7;
+            }
+        }
+
+        .psh__portfolio-card-photo {
+            width: 17rem;
+            height: 9.5rem;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
+
+            .psh__portfolio-card-photo-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                transition: all 1s ease;
+                color: #FFF;
+                &.active {
+                    background: rgba($color: #000000, $alpha: 0.5);
+                    display: inline-flex;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .psh__portfolio-card-text{
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .psh__portfolio-oval {
+        width: 60rem;
+        height: 60rem;
+        background: #000011;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .psh__portfolio-oval-light {
+            width: 0;
+            height: 0;
+            z-index: 2;
+            border-radius: 50%;
+            border-top: 30rem solid transparent;
+            border-bottom: 30rem solid transparent;
+            border-left: 30rem solid rgba($color: #eee, $alpha: 0.5);
+            border-right: 30rem solid rgba($color: #eee, $alpha: 0.5);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            transition: all ease;
+            animation: rotateDOM 6s linear infinite;
+        }
+    }
+
+    .psh__portfolio-oval-border1 {
+        width: 50rem;
+        height: 50rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .psh__portfolio-oval-border2 {
+        width: 46rem;
+        height: 46rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .psh__portfolio-oval-border3 {
+        width: 42rem;
+        height: 42rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .psh__portfolio-oval-border {
+        position: absolute;
+        width: 26rem;
+        height: 26rem;
+        background: rgb(20, 20, 20);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .psh__portfolio-oval-main {
+            position: absolute;
+            width: 19rem;
+            height: 19rem;
+            background: var(--ivory);
+            border-radius: 50%;
+            left: 13%;
+            top: 13%;
+            animation: rotateDOM 6s linear infinite;
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    .psh__portfolio-navi {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes rotateDOM {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
