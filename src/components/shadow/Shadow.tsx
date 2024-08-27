@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Shadow = () => {
+interface Shadow {
+  onPop: () => void;
+}
+
+const Shadow: React.FC<Shadow> = ({onPop}) => {
   return (
-    <div className='psh__portfolio-shadow'></div>
+    <div className='psh__portfolio-shadow' onClick={()=>onPop()}></div>
   )
 }
 

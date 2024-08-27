@@ -19,11 +19,16 @@ const App = () => {
     to: { opacity: 1 },
   });
 
+  const popprop = useSpring({
+    top : pop ? '54%' : '50%',
+    config: { duration: 300 }
+  });
+
   const PopupClick = () => {
     setPop((prev) => !prev);
   }
 
-  const SinceClick = (props : number) => {
+  const SinceClick = (props: number) => {
     setSince(props);
   }
 
@@ -33,10 +38,16 @@ const App = () => {
         <Main />
       </animated.div>
       <animated.div style={navprop}>
-        <Navi onPop={PopupClick} onSince={SinceClick}/>
+        <Navi onPop={PopupClick} onSince={SinceClick} />
       </animated.div>
-      {pop && <Popup onPop={PopupClick} popSince={since}/>} 
-      {pop && <Shadow/>}
+      {pop && (
+        <>
+          <animated.div style={popprop}  className="psh__portfolio-popup">
+            <Popup onPop={PopupClick} popSince={since} />
+          </animated.div>
+          <Shadow onPop={PopupClick} />
+        </>
+      )}
     </div>
   )
 };

@@ -30,7 +30,7 @@ const About = () => {
             <div className='about-body-career-text'>
               <h4>(주)행복한다람쥐단</h4>
               <h5 style={{margin:'1rem 0'}}>직무 : 웹 프론트, 백엔드, 게임 QA, 로블록스 개발</h5>
-              <h5>재직일 : 22/06~24/02</h5>
+              <h5>재직일 : 2022/06~2024/02</h5>
             </div>
           </div>
         </div>

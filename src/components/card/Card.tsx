@@ -2,16 +2,12 @@ import React, { useState } from 'react'
 
 interface photoCard {
     onTitle: string;
-    onLink: string;
     onDays: string;
     onContents: string;
 }
 
-const Card: React.FC<photoCard> = ({ onTitle, onLink, onDays, onContents }) => {
+const Card: React.FC<photoCard> = ({ onTitle, onDays, onContents }) => {
     const [overlayActive, setOverlayActive] = useState(false);
-    const onImgClick = () => {
-        window.open(onLink, '_blank')
-    };
     const toggleOverlay = () => {
         setOverlayActive(!overlayActive);
     }
@@ -22,9 +18,6 @@ const Card: React.FC<photoCard> = ({ onTitle, onLink, onDays, onContents }) => {
             </div>
             <div className='psh__portfolio-card-body'>
                 <div>
-                    <div>
-                        <a href={onLink} target='blank'>링크</a>
-                    </div>
                     <div className='psh__portfolio-card-text'>
                         <span className='psh__portfolio-card-text-contents'><h5>프로젝트명 :</h5>{onTitle}</span>
                         <span className='psh__portfolio-card-text-contents'><h5>개발일자 :</h5>{onDays}</span>

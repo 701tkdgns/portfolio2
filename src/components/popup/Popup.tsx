@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react'
 import { BiX } from "react-icons/bi";
 import { About, History } from '../';
+import { animated } from '@react-spring/web';
 
 interface Pop {
   onPop: () => void;
   popSince: number;
 }
 
-const Popup: React.FC<Pop> = ({ onPop, popSince }) => {
-  
-  useEffect(() => {
-    console.log(popSince);
-  }, []);
+const Popup: React.FC<Pop> = ({ onPop, popSince  }) => {
+
+  // useEffect(() => {
+  //   console.log(popSince);
+  // }, []);
 
   return (
-    <div className="psh__portfolio-popup">
+    <div>
       <div className="psh__portfolio-popup-header">
         <BiX onClick={() => onPop()} />
       </div>
@@ -23,6 +24,7 @@ const Popup: React.FC<Pop> = ({ onPop, popSince }) => {
         {popSince === 2 && <History />}
       </div>
     </div>
+    
   )
 }
 
