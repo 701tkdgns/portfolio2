@@ -17,12 +17,10 @@ const Card: React.FC<photoCard> = ({ onTitle, onDays, onContents }) => {
                 <h3>{onTitle}</h3>
             </div>
             <div className='psh__portfolio-card-body'>
-                <div>
-                    <div className='psh__portfolio-card-text'>
-                        <span className='psh__portfolio-card-text-contents'><h5>프로젝트명 :</h5>{onTitle}</span>
-                        <span className='psh__portfolio-card-text-contents'><h5>개발일자 :</h5>{onDays}</span>
-                        <span className='psh__portfolio-card-text-contents'><h5>역할 :</h5>{onContents}</span>
-                    </div>
+                <div className='psh__portfolio-card-text'>
+                    <span className='psh__portfolio-card-text-contents'><h5>프로젝트명 : {onTitle}</h5 ></span>
+                    <span className='psh__portfolio-card-text-contents'><h5>개발일자 : {onDays}</h5></span>
+                    <span className='psh__portfolio-card-text-contents'><h5>역할 : {onContents}</h5></span>
                 </div>
             </div>
         </div>

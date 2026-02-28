@@ -151,8 +151,8 @@ h6 {
 
 .psh__portfolio-popup {
     background: var(--ivory);
-    width: 25rem;
-    height: 25rem;
+    width: 30rem;
+    height: 30rem;
     overflow-y: scroll;
     position: absolute;
     top: 50%;
@@ -228,12 +228,22 @@ h6 {
             .about-body-career {
                 margin: 1rem 0;
 
+                .about-body-career-title::after{
+                    width: 50%;
+                    height: 1px;
+                    background-color: #eee;
+                    display: block;
+                    margin: 1rem auto;
+                    content: "";
+                }
+
                 .about-body-career-text {
                     margin: .5rem 0;
 
-                    // h5 {
-                    //     text-align-last: left;
-                    // }
+                    .about-body-career-text-row {
+                        display: flex;
+                        text-align: start;
+                    }
                 }
             }
 
@@ -244,32 +254,39 @@ h6 {
     }
 }
 
+
+
 .history {
     width: 100%;
     height: 100%;
 
     .history-header {
         text-align: center;
+        h2{
+            padding: 1rem;
+        }
     }
 }
 
 .psh__portfolio-card {
     .psh__portfolio-card-header {
         text-align: center;
-        margin: 1rem 0;
+        margin: .5rem 0;
         padding: .25rem;
     }
+
     .psh__portfolio-card-body {
-        display: flex;
+        // display: flex;
         justify-content: center;
         padding: 0 4rem;
-        
+
         a {
             text-decoration: none;
             color: #000000;
             transition: all 1s ease;
             font-size: 1.2rem;
-            &:hover{
+
+            &:hover {
                 color: #1789e7;
             }
         }
@@ -295,6 +312,7 @@ h6 {
                 height: 100%;
                 transition: all 1s ease;
                 color: #FFF;
+
                 &.active {
                     background: rgba($color: #000000, $alpha: 0.5);
                     display: inline-flex;
@@ -305,9 +323,49 @@ h6 {
             }
         }
     }
-    .psh__portfolio-card-text{
+
+    .psh__portfolio-card-text {
         margin: 1rem 0;
     }
+}
+
+.psh__portfolio-card::after {
+    width: 50%;
+    height: 1px;
+    background-color: #eee;
+    display: block;
+    margin: 1rem auto;
+    content: "";
+}
+
+.psh__portfolio-career {
+    .psh__portfolio-career-header {
+        text-align: center;
+        margin: 1rem 0;
+        padding: .25rem;
+    }
+
+    .psh__portfolio-career-body {
+        display: flex;
+        justify-content: center;
+        // padding: 0 4rem;
+        text-align: start;
+
+        .psh__portfolio-career-text {
+            margin: .5rem 0;
+        }
+    }
+}
+
+
+
+.psh__portfolio-career::after {
+    width: 50%;
+    height: 1px;
+    background-color: #eee;
+    display: block;
+    margin: 1rem auto;
+    content: "";
 }
 
 @media screen and (max-width: 1000px) {
@@ -392,6 +450,8 @@ h6 {
         transform: translate(-50%, -50%);
     }
 }
+
+
 
 @keyframes rotateDOM {
     from {
