@@ -1,8 +1,9 @@
 import React from 'react'
 import profile from '../../assets/profile.jpg';
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiMongodb, SiRedis, SiJenkins, SiKubernetes, SiDocker, SiMysql, SiNodedotjs, SiReact, SiCashapp, SiDotnet } from "react-icons/si";
+import { SiTypescript, SiMongodb, SiRedis, SiJenkins, SiMysql, SiNodedotjs, SiReact, SiCashapp, SiDotnet } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
-import { AiOutlineJava } from "react-icons/ai";
+import { FaJava } from "react-icons/fa";
+import { BiLogoSpringBoot } from "react-icons/bi";
 import Career from '../card/Career';
 
 const About = () => {
@@ -17,10 +18,9 @@ const About = () => {
           <div className='about-body-text'>
             <h3>Tech Stack</h3>
             <div className='about-body-text-part'>
-              <div className='about-body-text-tech'><TbBrandCSharp /> <SiTypescript /> < AiOutlineJava /> </div>
-              <div className='about-body-text-tech'><SiDotnet /> <SiReact /> <SiNodedotjs /></div>
-              <div className='about-body-text-tech'><SiMysql /> <SiRedis /> <SiMongodb /></div>
-              <div className='about-body-text-tech'><SiJenkins /> </div>
+              <div className='about-body-text-tech'><TbBrandCSharp /> <SiTypescript /> <FaJava /> <SiReact /> </div>
+              <div className='about-body-text-tech'><SiDotnet /> <SiNodedotjs /> <BiLogoSpringBoot /></div>
+              <div className='about-body-text-tech'><SiMysql /> <SiRedis /> <SiMongodb /> <SiJenkins /></div>
             </div>
           </div>
           <div className='about-body-career'>
